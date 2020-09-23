@@ -23,10 +23,9 @@ const Bio = () => {
         siteMetadata {
           author {
             name
-            summary
           }
           social {
-            twitter
+            instagram
           }
         }
       }
@@ -53,11 +52,10 @@ const Bio = () => {
       )}
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Personal Blog by <strong> <a href={`https://www.instagram.com/${social?.instagram}`}>{author.name}</a></strong>
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
+          <br/>
+          Currently exploring JavaScript's magical world & writing about it
         </p>
       )}
     </div>
